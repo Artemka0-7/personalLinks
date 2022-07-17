@@ -32,6 +32,7 @@ html {
   align-items: stretch;
   justify-self: flex-start;
   gap: 1.5rem;
+  margin: auto 0;
   @media(max-width: $tablet){
     gap: 1rem;
   }
@@ -40,12 +41,13 @@ html {
   }
 }
 
+
 //* Body and ...
 body{
   height: 100%;
   background-color: $bodyBackground;
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: 280px;
   &.locked{
     overflow: hidden;
   }

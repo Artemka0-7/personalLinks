@@ -1,6 +1,13 @@
 @import '../../../../styles/vars';
 
 .about{
+  margin-top: 10rem;
+  @media(max-width: $pc){
+    margin-top: 7rem;
+  }
+  @media(max-width: $tablet){
+    margin-top: 5rem;
+  }
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
