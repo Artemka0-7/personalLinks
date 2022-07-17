@@ -1,0 +1,13 @@
+@import '../../../styles/vars';
+
+.home{
+  margin-top: 10rem;
+  @media(max-width: $pc){
+    margin-top: 7rem;
+  }
+  @media(max-width: $tablet){
+    margin-top: 5rem;
+  }
+  min-height: 100vh;
+}
+

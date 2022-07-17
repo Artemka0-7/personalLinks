@@ -1,0 +1,46 @@
+@import '../../../../styles//vars';
+
+.videos{
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  gap: 30px;
+  background-color: $grey;
+  padding: 12px;
+  @media(max-width: 769px){
+    flex-direction: column;
+    gap: 14px;
+  }
+  .title{
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @media(max-width: 769px){
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+  .item{
+    display: flex;
+    align-items: center;
+    background-color: $black;
+    padding: 8px 12px;
+    max-width: 380px;
+    gap: 10px;
+    
+  }
+  .item-title{
+    font-weight: normal;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 80%;
+  }
+}
