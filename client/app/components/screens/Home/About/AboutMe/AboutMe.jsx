@@ -1,8 +1,7 @@
 import styles from './AboutMe.module.scss'
 import { useOutside } from '../../../../../hooks/useOutside'
-import { me } from '../../../../../constants/constants'
 
-const AboutMe = () => {
+const AboutMe = ({ description }) => {
   const { ref, isShow, setIsShow } = useOutside(false)
 
   return (
@@ -10,7 +9,9 @@ const AboutMe = () => {
       <h1 className={styles.title} ref={ref} onClick={() => setIsShow(!isShow)}>Обо мне</h1>
       {isShow && (
         <div className={styles.desc}>
-          <p>{me.description}</p>
+          {description.map(({ item }, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
       )}
     </>

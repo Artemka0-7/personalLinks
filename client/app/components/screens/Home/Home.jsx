@@ -4,14 +4,14 @@ import Videos from './Videos/Videos'
 import Grid from './Grid/Grid'
 import Circles from '../../ui/Circles/Circles'
 
-const Home = () => {
+const Home = ({ cms }) => {
   return (
     <section className={styles.home}>
       <div className="container">
         <div className="wrapper">
-          <About />
-          <Videos />
-          <Grid />
+          <About me={cms.me} />
+          <Videos videos={cms.VideoList} />
+          <Grid links={cms.LinksList} />
         </div>
       </div>
       <Circles />

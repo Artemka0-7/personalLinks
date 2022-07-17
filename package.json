@@ -1,22 +1,26 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artemka0-7/personal-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Artemka0-7/personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/Artemka0-7/personal-portfolio#readme",
   "dependencies": {
-    "axios": "^0.27.2",
-    "next": "12.2.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sass": "^1.53.0"
-  },
-  "devDependencies": {
-    "eslint": "8.19.0",
-    "eslint-config-next": "12.2.0"
+    "concurrently": "^7.2.1",
+    "react-icons": "^4.4.0"
   }
 }

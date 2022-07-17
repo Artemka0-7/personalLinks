@@ -2,9 +2,8 @@ import styles from './About.module.scss'
 import Image from 'next/image';
 import { APP_URL } from '../../../../constants/constants'
 import AboutMe from './AboutMe/AboutMe';
-import { me } from '../../../../constants/constants';
 
-const About = () => {
+const About = ({ me }) => {
   return (
     <section className={styles.about}>
       <div className={styles.content}>
@@ -40,7 +39,7 @@ const About = () => {
         </div>
       </div>  
       <div className={styles.aboutme}>
-        <AboutMe />
+        <AboutMe description={me.description} />
       </div>
     </section>
   )
