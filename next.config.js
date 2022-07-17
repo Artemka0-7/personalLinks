@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: { domains: ['localhost', 'cdn-icons.flaticon.com', 'cdn-icons-png.flaticon.com'] },
+  images: { domains: ['localhost', '192.168.1.61', 'cdn-icons.flaticon.com', 'cdn-icons-png.flaticon.com'] },
   env: {
 		APP_URL: process.env.APP_URL,
 	}

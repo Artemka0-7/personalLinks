@@ -2,6 +2,7 @@ import styles from './Home.module.scss'
 import About from './About/About'
 import Videos from './Videos/Videos'
 import Grid from './Grid/Grid'
+import Circles from '../../ui/Circles/Circles'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
           <Grid />
         </div>
       </div>
+      <Circles />
     </section>
   )
 }

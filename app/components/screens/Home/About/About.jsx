@@ -1,19 +1,20 @@
 import styles from './About.module.scss'
 import Image from 'next/image';
-import { APP_URL } from '../../../../constants'
+import { APP_URL } from '../../../../constants/constants'
 import AboutMe from './AboutMe/AboutMe';
+import { me } from '../../../../constants/constants';
 
-const About = ({ about }) => {
+const About = () => {
   return (
     <section className={styles.about}>
       <div className={styles.content}>
         <div className={styles['image-wrapper']}>
-          <Image className={styles.image} width={190} height={190} src={`${APP_URL}/avatar.jpeg`} />
+          <Image className={styles.image} width={190} height={190} src={me.avatarPath} />
         </div>
         <h1 className={styles.title}>
-          RED Group
+          {me.name}
           <Image
-            src="https://cdn-icons.flaticon.com/png/512/2143/premium/2143150.png?token=exp=1656945314~hmac=0a5e42fb5602d8642127c7464cf2fd2b"
+            src={`${APP_URL}/icons/verified.svg`}
             alt=""
             height={16}
             width={16}
@@ -28,7 +29,7 @@ const About = ({ about }) => {
           >
             <span>
               <Image
-                src="https://cdn-icons-png.flaticon.com/512/893/893257.png"
+                src={`${APP_URL}/icons/email.svg`}
                 alt=""
                 height={18}
                 width={18}
@@ -39,7 +40,7 @@ const About = ({ about }) => {
         </div>
       </div>  
       <div className={styles.aboutme}>
-        <AboutMe about={about}/>
+        <AboutMe />
       </div>
     </section>
   )

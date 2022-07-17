@@ -35,6 +35,10 @@
     max-width: 380px;
     width: auto;
     gap: 10px;
+    transition: all .3s ease;
+    &:hover{
+      background-color: #000;
+    }
     @media(max-width: 1080px){
       max-width: 320px;
     }

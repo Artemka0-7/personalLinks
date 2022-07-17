@@ -1,8 +1,5 @@
-import Home from '../components/screens/Home/Home'
-import Head from 'next/head';
-import MetaTitle from '../components/ui/MetaTitle'
-import axios from 'axios'
-import { APP_URL } from '../constants';
+import Home from '../app/components/screens/Home/Home'
+import MetaTitle from '../app/components/ui/MetaTitle'
 
 const Index = () => {
   return (
