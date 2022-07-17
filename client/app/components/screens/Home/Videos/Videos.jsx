@@ -7,7 +7,7 @@ const Videos = ({ videos }) => {
       <h3 className={styles.title}>Новые видео 👉</h3>
       <div className={styles.content}>
         {videos.map(({ path, title }, id) => (
-          <div className={styles.item}>
+          <div className={styles.item} key={id}>
             <Image src={path} className={styles.itemImg} width={70} height={52} />
             <h4 className={styles['item-title']}>{title}</h4>
           </div>

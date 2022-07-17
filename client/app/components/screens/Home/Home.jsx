@@ -6,16 +6,20 @@ import Circles from '../../ui/Circles/Circles'
 
 const Home = ({ cms }) => {
   return (
-    <section className={styles.home}>
-      <div className="container">
-        <div className="wrapper">
-          <About me={cms.me} />
-          <Videos videos={cms.VideoList} />
-          <Grid links={cms.LinksList} />
-        </div>
-      </div>
-      <Circles />
-    </section>
+    <>
+      {cms.map(({ _id, me, VideoList, LinksList }) => (
+        <section className={styles.home} key={_id}>
+          <div className="container">
+            <div className="wrapper">
+              <About me={me} />
+              <Videos videos={VideoList} />
+              <Grid links={LinksList} />
+            </div>
+          </div>
+          <Circles />
+        </section>
+      ))}}
+    </>
   )
 }
 
